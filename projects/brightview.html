@@ -38,7 +38,7 @@ Brady Chaulk
 <h1>BrightView</h1>
 
 <p class="project-tagline">
-Browser extension improving the Brightspace learning platform.
+A Chrome extension that analyzes Brightspace grade data locally in the browser to give students clear performance insight and target grade projections.
 </p>
 
 <div class="project-links">
@@ -57,10 +57,13 @@ Browser extension improving the Brightspace learning platform.
 <h2>Overview</h2>
 
 <p>
-Write a short explanation of the project here.
+BrightView is a Chrome extension that analyzes and summarizes Brightspace (D2L) grade data directly inside the browser.
 
-Explain what problem BrightView solves for students and why the
-Brightspace interface needed improvement.
+While Brightspace exposes raw grade information, it provides very little interpretation of that data. Students must manually calculate required scores, estimate their standing, and mentally aggregate grades across categories.
+
+BrightView performs this analysis automatically. The extension parses grade data from the Brightspace interface and computes meaningful performance insights such as required scores for target grades and overall grade clarity.
+
+All computation occurs locally within the browser. No grade data is transmitted externally.
 </p>
 
 </section>
@@ -71,11 +74,17 @@ Brightspace interface needed improvement.
 <h2>The Problem</h2>
 
 <p>
-Describe the pain point.
+Learning management systems such as Brightspace present grade data as individual scores without meaningful interpretation.
 
-Example ideas:
-Brightspace navigation issues, missing features,
-poor grade visibility, etc.
+Students frequently need to answer questions such as:
+
+• What score do I need on the next assignment to reach a specific final grade?
+• What is my true standing across weighted categories?
+• How close am I to important grade thresholds?
+
+Answering these questions requires manual calculations using incomplete information from the platform interface.
+
+BrightView was designed to provide these insights directly within the grade view that students already use.
 </p>
 
 </section>
@@ -86,11 +95,19 @@ poor grade visibility, etc.
 <h2>The Solution</h2>
 
 <p>
-Explain what BrightView actually does.
+BrightView augments the Brightspace grade interface with client-side analysis tools.
 
-Example:
-UI improvements, additional information, automation,
-dashboard improvements, etc.
+The extension parses grade data from the page DOM and performs local calculations to generate additional insights such as target-grade projections and aggregated performance summaries.
+
+Two operating modes are provided:
+
+Basic Mode
+Displays a clean overview of current course averages.
+
+Advanced Mode
+Allows students to specify target grades and calculates the required performance needed to reach those outcomes.
+
+All analysis occurs locally within the browser session and requires no external services or backend infrastructure.
 </p>
 
 </section>
@@ -102,12 +119,42 @@ dashboard improvements, etc.
 
 <div class="tech-grid">
 
-<div class="tech-card">JavaScript</div>
-<div class="tech-card">Chrome Extensions API</div>
-<div class="tech-card">HTML / CSS</div>
-<div class="tech-card">DOM Manipulation</div>
+<div class="tech-card">JavaScript (ES6)</div>
+<div class="tech-card">Chrome Extensions API (Manifest V3)</div>
+<div class="tech-card">DOM Parsing and Structured Data Extraction</div>
+<div class="tech-card">Client-side Computation</div>
+<div class="tech-card">HTML / CSS Interface Injection</div>
+
 
 </div>
+
+</section>
+
+
+<section class="project-section">
+
+<h2>Architecture</h2>
+
+<p>
+BrightView is built as a Manifest V3 Chrome extension designed to operate across multiple Brightspace deployments.
+
+The extension targets Brightspace pages through scoped host permissions and dynamically analyzes the DOM structure of grade tables to extract relevant performance data.
+
+Extracted values are processed entirely client-side using modular parsing and computation logic. The architecture avoids any backend dependency and ensures that sensitive academic data never leaves the user's browser environment.
+</p>
+
+</section>
+
+
+<section class="project-section">
+
+<h2>Privacy</h2>
+
+<p>
+BrightView is designed with a strict client-side privacy model.
+
+No user data is transmitted, stored, or analyzed outside of the browser environment. All calculations are performed locally and the extension does not communicate with external servers or analytics platforms.
+</p>
 
 </section>
 
@@ -161,14 +208,11 @@ dashboard improvements, etc.
 <h2>Results</h2>
 
 <p>
-Write metrics or impact here.
+BrightView was released through the Chrome Web Store as an experimental student-built tool for improving grade visibility.
 
-Example:
+The project served as a practical exercise in browser extension architecture, DOM parsing reliability, and platform policy constraints associated with cross-domain host permissions.
 
-Number of users  
-Student feedback  
-Performance improvements  
-Lessons learned
+Development required balancing portability across different institutional Brightspace deployments with Chrome Web Store security and review guidelines.
 </p>
 
 </section>
