@@ -322,3 +322,35 @@ text-align: center;
 color: #777;
 font-size: 14px;
 }
+
+/* Screenshots */
+
+.screenshot-grid{
+
+display:flex;
+
+gap:30px;
+
+flex-wrap:wrap;
+
+margin-top:25px;
+
+}
+
+.screenshot-grid img{
+
+width:260px;
+
+border-radius:8px;
+
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+transition:0.2s;
+
+}
+
+.screenshot-grid img:hover{
+
+transform:scale(1.04);
+
+}
