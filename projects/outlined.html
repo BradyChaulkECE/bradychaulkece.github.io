@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BrightView – Project</title>
+<title>Outlined – Project</title>
 
 <link rel="stylesheet" href="/css/styles.css">
 
@@ -35,17 +35,17 @@ Brady Chaulk
 
 <section class="project-hero">
 
-<h1>BrightView</h1>
+<h1>Outlined</h1>
 
 <p class="project-tagline">
-Browser extension improving the Brightspace learning platform.
+A tool that converts course outline PDFs into structured Obsidian study vaults.
 </p>
 
 <div class="project-links">
 
-<a class="btn-primary" href="#">Chrome Web Store</a>
+<a class="btn-primary" href="#">Download Tool</a>
 
-<a class="btn-secondary" href="#">GitHub Repository</a>
+<a class="btn-secondary" href="https://github.com/BradyChaulkECE">GitHub Repository</a>
 
 </div>
 
@@ -57,10 +57,16 @@ Browser extension improving the Brightspace learning platform.
 <h2>Overview</h2>
 
 <p>
-Write a short explanation of the project here.
+Outlined is a tool that transforms course outline PDFs into fully structured
+Obsidian course vaults.
 
-Explain what problem BrightView solves for students and why the
-Brightspace interface needed improvement.
+University course outlines contain essential information such as units,
+assignments, and important dates, but students typically have to manually
+organize this information for studying.
+
+Outlined automatically extracts these sections from a syllabus and generates a
+ready-to-use study vault with organized notes, unit folders, and structured
+templates for efficient exam preparation.
 </p>
 
 </section>
@@ -71,11 +77,14 @@ Brightspace interface needed improvement.
 <h2>The Problem</h2>
 
 <p>
-Describe the pain point.
+Students often rely on course outlines as the central reference for their
+semester, yet the information is typically locked inside a static PDF.
 
-Example ideas:
-Brightspace navigation issues, missing features,
-poor grade visibility, etc.
+Extracting useful study structure from a syllabus requires manually creating
+folders, organizing units, listing assignments, and copying key dates.
+
+This process is repetitive and time-consuming, especially when managing
+multiple courses.
 </p>
 
 </section>
@@ -86,12 +95,50 @@ poor grade visibility, etc.
 <h2>The Solution</h2>
 
 <p>
-Explain what BrightView actually does.
+Outlined automates this workflow.
 
-Example:
-UI improvements, additional information, automation,
-dashboard improvements, etc.
+The program analyzes the course outline PDF and extracts key academic
+structures such as units, assessments, and dates. It then generates a
+structured Obsidian vault with predefined note templates designed for
+organized studying.
+
+Students can immediately begin working inside a structured knowledge system
+without manual setup.
 </p>
+
+</section>
+
+
+<section class="project-section">
+
+<h2>Output Structure</h2>
+
+<p>
+For each course outline, Outlined generates a structured vault containing:
+</p>
+
+<ul class="feature-list">
+
+<li>Course Overview</li>
+<li>Assessment Breakdown</li>
+<li>Important Dates</li>
+<li>Unit folders with structured study templates</li>
+
+</ul>
+
+<p>
+Each unit contains a "Unit Summary" template with sections for:
+</p>
+
+<ul class="feature-list">
+
+<li>Core Concepts</li>
+<li>Definitions</li>
+<li>Equations</li>
+<li>Problem-Solving Strategies</li>
+<li>Exam Questions</li>
+
+</ul>
 
 </section>
 
@@ -102,10 +149,11 @@ dashboard improvements, etc.
 
 <div class="tech-grid">
 
-<div class="tech-card">JavaScript</div>
-<div class="tech-card">Chrome Extensions API</div>
-<div class="tech-card">HTML / CSS</div>
-<div class="tech-card">DOM Manipulation</div>
+<div class="tech-card">Python</div>
+<div class="tech-card">PDF Parsing</div>
+<div class="tech-card">Text Pattern Extraction</div>
+<div class="tech-card">Automated File Generation</div>
+<div class="tech-card">Obsidian Markdown Structure</div>
 
 </div>
 
@@ -114,29 +162,56 @@ dashboard improvements, etc.
 
 <section class="project-section">
 
-<h2>Key Features</h2>
+<h2>How It Works</h2>
+
+<p>
+The workflow is designed to be simple and fast:
+</p>
 
 <ul class="feature-list">
 
-<li>Improved Brightspace grade visibility</li>
-
-<li>Cleaner interface layout</li>
-
-<li>Additional student tools</li>
-
-<li>Performance optimized UI rendering</li>
+<li>Launch the Outlined application</li>
+<li>Select a course outline PDF</li>
+<li>Choose an output folder</li>
+<li>The tool automatically generates the course vault</li>
 
 </ul>
 
+<p>
+The resulting folder structure can be opened directly in Obsidian for immediate
+use as a study workspace.
+</p>
+
 </section>
 
+
+<section class="project-section">
+
+<h2>Limitations</h2>
+
+<p>
+Course outlines vary significantly in formatting across institutions.
+Outlined performs best when the document contains identifiable sections such
+as instructor information, units, assignments, and dates.
+
+In some cases minor manual edits may be required after vault generation.
+</p>
+
+</section>
 
 <section class="project-section">
 
 <h2>Screenshots</h2>
 
-<div class="image-placeholder">
-Add screenshots of the extension here
+<div class="screenshot-grid">
+
+<div class="screenshot-card">
+<a href="/images/outlined.png" target="_blank">
+<img src="/images/outlined.png" alt="Outlined image">
+</a>
+<p>Outlined v1.0 – Outline to Obsidian Vault</p>
+</div>
+
 </div>
 
 </section>
@@ -144,17 +219,10 @@ Add screenshots of the extension here
 
 <section class="project-section">
 
-<h2>Results</h2>
+<h2>Version</h2>
 
 <p>
-Write metrics or impact here.
-
-Example:
-
-Number of users  
-Student feedback  
-Performance improvements  
-Lessons learned
+Outlined v1.0
 </p>
 
 </section>
@@ -165,7 +233,6 @@ Lessons learned
 © 2026 Brady Chaulk
 
 </footer>
-
 
 </body>
 </html>
