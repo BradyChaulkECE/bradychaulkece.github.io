@@ -1,76 +1,157 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    margin:0;
-    background:#f5f5f5;
-    color:#333;
+
+font-family: "Inter", sans-serif;
+
+margin:0;
+
+background:#f7f8fa;
+
+color:#2c2c2c;
+
+line-height:1.6;
+
+}
+
+.container{
+
+max-width:900px;
+
+margin:auto;
+
+padding:40px 20px;
+
 }
 
 header{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:60px 20px;
+
+background:#0f172a;
+
+color:white;
+
+text-align:center;
+
+padding:80px 20px;
+
 }
 
 header h1{
-    margin:0;
-    font-size:42px;
+
+margin:0;
+
+font-size:42px;
+
+font-weight:600;
+
 }
 
-nav{
-    background:#222;
-    text-align:center;
-    padding:10px;
+.subtitle{
+
+margin-top:15px;
+
+opacity:.85;
+
 }
 
-nav a{
-    color:white;
-    margin:0 15px;
-    text-decoration:none;
-    font-weight:bold;
+.links{
+
+margin-top:25px;
+
 }
 
-nav a:hover{
-    text-decoration:underline;
+.links a{
+
+margin:0 10px;
+
+text-decoration:none;
+
+color:#60a5fa;
+
+font-weight:500;
+
 }
 
-section{
-    max-width:900px;
-    margin:auto;
-    padding:40px 20px;
+.links a:hover{
+
+text-decoration:underline;
+
 }
 
 h2{
-    border-bottom:2px solid #ddd;
-    padding-bottom:10px;
+
+margin-top:60px;
+
+margin-bottom:20px;
+
+font-weight:600;
+
 }
 
-.project{
-    background:white;
-    padding:20px;
-    margin:20px 0;
-    border-radius:6px;
-    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:20px;
+
 }
 
-.project h3{
-    margin-top:0;
+.card{
+
+background:white;
+
+padding:25px;
+
+border-radius:10px;
+
+box-shadow:0 4px 12px rgba(0,0,0,.05);
+
+transition:.2s;
+
 }
 
-.project a{
-    display:inline-block;
-    margin-top:10px;
-    text-decoration:none;
-    color:#0077cc;
+.card:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 6px 16px rgba(0,0,0,.08);
+
 }
 
-.project a:hover{
-    text-decoration:underline;
+.card h3{
+
+margin-top:0;
+
+}
+
+.card a{
+
+text-decoration:none;
+
+color:#2563eb;
+
+font-weight:500;
+
+}
+
+.card a:hover{
+
+text-decoration:underline;
+
 }
 
 footer{
-    text-align:center;
-    padding:30px;
-    background:#111;
-    color:white;
+
+margin-top:80px;
+
+text-align:center;
+
+padding:30px;
+
+background:#111;
+
+color:#aaa;
+
+font-size:14px;
+
 }

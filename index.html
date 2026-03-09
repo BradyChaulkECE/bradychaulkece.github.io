@@ -2,46 +2,84 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Brady Chaulk</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brady Chaulk</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
 <header>
-    <h1>Brady Chaulk</h1>
-    <p>Computer Engineering Student • Builder • Problem Solver</p>
+
+<div class="container">
+
+<h1>Brady Chaulk</h1>
+
+<p class="subtitle">
+Computer Engineering Student  
+Building software tools, embedded systems, and automation.
+</p>
+
+<div class="links">
+<a href="https://github.com/BradyChaulkECE" target="_blank">GitHub</a>
+<a href="#projects">Projects</a>
+<a href="#tools">Tools</a>
+</div>
+
+</div>
+
 </header>
 
-<nav>
-    <a href="#projects">Projects</a>
-    <a href="#tools">Tools</a>
-    <a href="https://github.com/BradyChaulkECE" target="_blank">GitHub</a>
-</nav>
+<main class="container">
 
 <section id="about">
-    <h2>About</h2>
-    <p>
-        I build software tools, engineering systems, and automation projects.
-        My work focuses on solving real problems through clean design and practical engineering.
-    </p>
+
+<h2>About</h2>
+
+<p>
+I build engineering tools, software systems, and automation projects.  
+My focus is practical problem solving — designing tools that remove friction
+from real workflows.
+</p>
+
 </section>
 
 <section id="projects">
 
 <h2>Projects</h2>
 
-<div class="project">
-    <h3>BrightView</h3>
-    <p>Browser extension that improves the Brightspace learning platform.</p>
-    <a href="projects/brightview.html">View Project</a>
+<div class="grid">
+
+<div class="card">
+
+<h3>BrightView</h3>
+
+<p>
+Browser extension improving the Brightspace learning platform.
+</p>
+
+<a href="projects/brightview.html">View Project →</a>
+
 </div>
 
-<div class="project">
-    <h3>Jarvis</h3>
-    <p>Personal AI assistant running on Raspberry Pi with voice control.</p>
-    <a href="projects/jarvis.html">View Project</a>
+<div class="card">
+
+<h3>Jarvis</h3>
+
+<p>
+Voice-controlled AI assistant running on Raspberry Pi hardware.
+</p>
+
+<a href="projects/jarvis.html">View Project →</a>
+
+</div>
+
 </div>
 
 </section>
@@ -50,16 +88,30 @@
 
 <h2>Tools</h2>
 
-<div class="project">
-    <h3>Outlined</h3>
-    <p>Automatically converts course outlines into structured Obsidian study vaults.</p>
-    <a href="tools/outlined.html">Details</a>
+<div class="grid">
+
+<div class="card">
+
+<h3>Outlined</h3>
+
+<p>
+Converts course outlines into structured Obsidian study vaults automatically.
+</p>
+
+<a href="tools/outlined.html">Details →</a>
+
+</div>
+
 </div>
 
 </section>
 
+</main>
+
 <footer>
+
 <p>© 2026 Brady Chaulk</p>
+
 </footer>
 
 </body>
