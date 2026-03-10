@@ -323,30 +323,41 @@ color: #777;
 font-size: 14px;
 }
 
-/* Screenshots */
-
+/* Screenshot layout */
 
 .screenshot-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:40px;
 margin-top:40px;
-align-items:start;
 }
 
 .screenshot-card{
+background:white;
+padding:20px;
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 text-align:center;
-max-width:340px;
+max-width:320px;
 margin:auto;
 }
+
+/* BrightView screenshots */
 
 .screenshot-card img{
 width:100%;
 height:auto;
-border-radius:10px;
-box-shadow:0 12px 30px rgba(0,0,0,0.12);
+object-fit:contain;
+border-radius:8px;
 }
 
+/* Caption */
+
+.screenshot-card p{
+margin-top:14px;
+font-size:14px;
+color:#666;
+}
 
 .screenshot-card img:hover{
 transform:scale(1.02);
