@@ -18,23 +18,7 @@
 <body>
 
 
-<header class="navbar">
-
-<nav class="nav-links">
-
-<a href="index.html">Home</a>
-<a href="#projects">Projects</a>
-<a href="/tools">Tools</a>
-<a href="#">Resume</a>
-<a href="https://github.com/BradyChaulkECE" target="_blank">GitHub</a>
-
-</nav>
-
-<div class="nav-name">
-Brady Chaulk
-</div>
-
-</header>
+<div id="navbar"></div>
 
 
 
@@ -130,6 +114,13 @@ Course outline → Obsidian vault generator.
 
 </footer>
 
+<script>
+fetch("/navbar.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("navbar").innerHTML = data;
+});
+</script>
 
 </body>
 
