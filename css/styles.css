@@ -283,9 +283,10 @@ gap: 15px;
 }
 
 .project-section {
-max-width: 750px;
+max-width: 900px;
 margin: 60px auto;
 padding: 0 20px;
+text-align: left;
 }
 
 .project-section h2 {
@@ -315,6 +316,8 @@ font-size: 14px;
 .feature-list {
 margin-top: 15px;
 padding-left: 20px;
+text-align: left;
+border-left: 3px solid #2563eb;
 }
 
 .feature-list li {
