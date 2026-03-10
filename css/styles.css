@@ -245,16 +245,6 @@ margin-top:80px;
 
 }
 
-body{
-min-height:100vh;
-display:flex;
-flex-direction:column;
-}
-
-footer{
-margin-top:auto;
-}
-
 /* PROJECTS */
 
 .project-hero {
@@ -283,10 +273,9 @@ gap: 15px;
 }
 
 .project-section {
-max-width: 900px;
+max-width: 750px;
 margin: 60px auto;
 padding: 0 20px;
-text-align: left;
 }
 
 .project-section h2 {
@@ -316,8 +305,6 @@ font-size: 14px;
 .feature-list {
 margin-top: 15px;
 padding-left: 20px;
-text-align: left;
-border-left: 3px solid #2563eb;
 }
 
 .feature-list li {
@@ -359,8 +346,7 @@ max-width:300px;
 
 .screenshot-card img{ 
 width:100%; 
-height:auto; 
-max-height: 340px;
+height:320px; 
 object-fit:contain; 
 background:white; 
 padding:10px; 
@@ -398,7 +384,7 @@ padding:0 20px;
 
 .product-layout{
 display:grid;
-grid-template-columns:1fr 1fr;
+grid-template-columns:55% 45%;
 gap:80px;
 align-items:center;
 }
