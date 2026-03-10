@@ -325,22 +325,28 @@ font-size: 14px;
 
 /* Screenshots */
 
+
 .screenshot-grid{
-display:flex;
-justify-content:center;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
 margin-top:40px;
+align-items:start;
 }
 
 .screenshot-card{
 text-align:center;
-max-width:900px;
+max-width:340px;
+margin:auto;
 }
 
 .screenshot-card img{
 width:100%;
 height:auto;
-display:block;
+border-radius:10px;
+box-shadow:0 12px 30px rgba(0,0,0,0.12);
 }
+
 
 .screenshot-card img:hover{
 transform:scale(1.02);
