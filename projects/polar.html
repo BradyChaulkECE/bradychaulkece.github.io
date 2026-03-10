@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jarvis – Project</title>
+
+<link rel="stylesheet" href="/css/styles.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="navbar"></div>
+
+
+<section class="project-hero">
+
+<h1>Polar</h1>
+
+<p class="project-tagline">
+Local AI voice assistant running on Raspberry Pi hardware.
+</p>
+
+<div class="project-links">
+
+<a class="btn-primary" href="#">GitHub Repository</a>
+
+<a class="btn-secondary" href="#">Project Documentation</a>
+
+</div>
+
+</section>
+
+
+<section class="project-section">
+
+<h2>Overview</h2>
+
+<p>
+Polar is a locally hosted AI voice assistant designed to run entirely
+on personal hardware. The system listens for a wake word, processes
+voice input, and performs system or web actions such as retrieving
+information, controlling services, or executing custom commands.
+</p>
+<p>
+Unlike commercial assistants like Alexa or Google Assistant,
+Polar is designed to be private and fully customizable.
+All processing runs locally on a Raspberry Pi, allowing experimentation
+with embedded AI, voice recognition, and automation systems.
+</p>
+
+</section>
+
+
+<section class="project-section">
+
+<h2>The Problem</h2>
+
+<p>
+Most voice assistants rely heavily on cloud infrastructure and
+proprietary software. This creates several problems:
+</p>
+
+<ul class="feature-list">
+<li>Limited customization for developers </li>
+<li>Privacy concerns with always-listening devices</li>
+<li>Dependence on external servers and APIs  </li>
+</ul>
+
+<p>
+For engineers and makers interested in building intelligent
+systems, there are few accessible platforms that allow full
+control over how a voice assistant actually works.
+</p>
+
+</section>
+
+
+<section class="project-section">
+
+<h2>The Solution</h2>
+
+<p>
+Polar was built as a modular voice assistant framework designed
+for experimentation and local deployment.
+
+The system continuously monitors audio input using a wake-word
+detection model. Once activated, speech is processed and routed
+through command logic that can trigger system tasks, API requests,
+or custom automation workflows.
+
+Because the assistant runs locally, developers can modify the
+wake word, integrate new machine learning models, and build
+custom command pipelines without relying on external services.
+</p>
+
+</section>
+
+
+<section class="project-section">
+
+<h2>Technology</h2>
+
+<div class="tech-grid">
+
+<div class="tech-card">Python</div>
+<div class="tech-card">Raspberry Pi</div>
+<div class="tech-card">Machine Learning</div>
+<div class="tech-card">Audio Signal Processing</div>
+<div class="tech-card">Wake Word Detection</div>
+<div class="tech-card">Text-to-Speech (TTS)</div>
+
+</div>
+
+</section>
+
+
+<section class="project-section">
+
+<h2>Key Features</h2>
+
+<ul class="feature-list">
+
+<li>Wake word detection using custom-trained ML models</li>
+
+<li>Local speech processing and command execution</li>
+
+<li>Modular architecture for adding new assistant abilities</li>
+
+<li>Offline text-to-speech voice responses</li>
+
+<li>Raspberry Pi hardware deployment</li>
+
+<li>Expandable automation and API integration</li>
+
+</ul>
+
+</section>
+
+
+<section class="project-section">
+
+<h2>Screenshots</h2>
+
+<div class="image-placeholder">
+Add images of the Raspberry Pi setup, system architecture,
+and command interface here
+</div>
+
+</section>
+
+
+<section class="project-section">
+
+<h2>Results</h2>
+
+<p>
+Polar demonstrates that a fully local voice assistant can be built
+using lightweight machine learning models and embedded hardware.
+
+The project serves as a research and experimentation platform
+for wake word detection, audio feature extraction, and real-time
+AI systems running on constrained devices.
+
+Future development includes improved wake word models, expanded
+command capabilities, and integration with additional hardware
+sensors and home automation systems.
+</p>
+
+</section>
+
+
+<footer class="footer">
+
+© 2026 Brady Chaulk
+
+</footer>
+
+<script>
+fetch("/navbar.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("navbar").innerHTML = data;
+});
+</script>
+
+</body>
+</html>
