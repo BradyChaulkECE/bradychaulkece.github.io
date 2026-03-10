@@ -337,9 +337,11 @@ max-width:900px;
 }
 
 .screenshot-card img{
-height:420px;
-object-fit:cover;
-object-position:top;
+width:100%;
+height:auto;
+border-radius:10px;
+box-shadow:0 12px 30px rgba(0,0,0,0.12);
+transition:transform .2s;
 }
 
 .screenshot-card img:hover{
@@ -352,4 +354,5 @@ transform:scale(1.02);
 width:100%;
 height:auto;
 object-fit:contain;
+box-shadow:0 12px 30px rgba(0,0,0,0.12);
 }
