@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Desktop Robotic Arm – Project</title>
+
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="navbar"></div>
+
+  <section class="project-hero">
+    <h1>Desktop Robotic Arm</h1>
+
+    <p class="project-tagline">
+      A precision-focused robotic arm project combining mechanical design,
+      custom electronics, and system-level engineering tradeoffs.
+    </p>
+
+    <div class="project-links">
+      <a class="btn-primary" href="/documentation/retrospective-week1.md">Project Documentation</a>
+      <a class="btn-secondary" href="#">GitHub Repository</a>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <h2>Overview</h2>
+
+    <p>
+      This project is a fully custom desktop robotic arm designed from scratch
+      with a focus on precision, structural reliability, and practical system integration.
+      Unlike my previous software-heavy projects, this build pushes into physical engineering:
+      mechanical design, torque constraints, actuation choices, PCB design, and power distribution.
+    </p>
+
+    <p>
+      The goal is to develop a functional prototype capable of lifting a 300g load at
+      maximum reach while keeping backlash low, maintaining a realistic budget,
+      and avoiding prebuilt robotic arm kits or tutorial-based designs.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Design Constraints</h2>
+
+    <ul class="feature-list">
+      <li>Working prototype targeted within 2–3 months</li>
+      <li>Lift 300g at maximum reach</li>
+      <li>Keep backlash as low as possible</li>
+      <li>Stay within a total budget of $300</li>
+      <li>Prioritize strength, precision, and reliability over cosmetic complexity</li>
+      <li>No outsourced robotic arm designs or tutorial-based builds</li>
+    </ul>
+  </section>
+
+  <section class="project-section">
+    <h2>Architecture Decisions</h2>
+
+    <p>
+      Early design work focused on choosing an arm structure that balanced cost,
+      strength, and manufacturability. After reviewing different robotic arm layouts,
+      I chose a double-supported segmented structure rather than a more expensive
+      industrial-style modular gearbox design.
+    </p>
+
+    <p>
+      I also compared steppers and servos for different joints. Stepper motors were
+      selected for the base roll, base pitch, and elbow due to their positional control
+      and compatibility with higher external gear reduction. Servo motors were reserved
+      for lower-load wrist and gripper functions where compact integrated actuation makes
+      more sense.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Mechanical Design</h2>
+
+    <p>
+      The arm is being designed in FreeCAD, with ongoing iteration around geometry,
+      joint spacing, and weight distribution. A key design goal is to keep heavier
+      components closer to the base while preserving enough reach for useful desk-scale tasks.
+    </p>
+
+    <p>
+      For power transmission, I moved away from large spur gear stacks and toward
+      belt-driven reduction. This makes high gear ratios more compact, easier to route,
+      and better suited to remote actuation where the motors can stay closer to the base.
+    </p>
+
+    <div class="screenshot-grid">
+      <div class="screenshot-card">
+        <a href="/images/robotic-arm-cad.png" target="_blank">
+          <img src="/images/robotic-arm-cad.png" alt="Desktop robotic arm CAD model">
+        </a>
+        <p>CAD model of the robotic arm structure</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <h2>Electronics & PCB</h2>
+
+    <p>
+      A custom PCB was designed to support motor control, power regulation,
+      and cleaner system integration. The board is built around TMC2209 stepper drivers
+      and a Raspberry Pi Pico, with separate power handling for motor drivers,
+      servos, and control logic.
+    </p>
+
+    <p>
+      This design was not just for cleaner wiring. It also improves modularity,
+      simplifies debugging, and creates a more scalable platform for future revisions
+      and added features.
+    </p>
+
+    <div class="tech-grid">
+      <div class="tech-card">FreeCAD</div>
+      <div class="tech-card">PCB Design</div>
+      <div class="tech-card">TMC2209 Drivers</div>
+      <div class="tech-card">Raspberry Pi Pico</div>
+      <div class="tech-card">Stepper Motors</div>
+      <div class="tech-card">Servo Integration</div>
+      <div class="tech-card">Belt Reduction</div>
+      <div class="tech-card">Power Regulation</div>
+    </div>
+
+    <div class="screenshot-grid">
+      <div class="screenshot-card">
+        <a href="/images/robotic-arm-pcb.png" target="_blank">
+          <img src="/images/robotic-arm-pcb.png" alt="Robotic arm PCB design">
+        </a>
+        <p>Custom PCB for motor control and power distribution</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <h2>Engineering Focus</h2>
+
+    <ul class="feature-list">
+      <li>Torque analysis and load-driven design decisions</li>
+      <li>Weight distribution and structural tradeoffs</li>
+      <li>Backlash reduction and motion precision</li>
+      <li>Remote actuation and compact power transmission</li>
+      <li>System-level integration of mechanics, electronics, and control</li>
+    </ul>
+  </section>
+
+  <section class="project-section">
+    <h2>Current Status</h2>
+
+    <p>
+      The CAD model is complete in its current revision, the PCB has been designed,
+      and major components have been selected. The project is now moving into optimization,
+      prototyping, and physical validation.
+    </p>
+
+    <p>
+      Next steps include refining the structure for weight and manufacturability,
+      validating torque assumptions in the real build, and iterating on any issues
+      that appear during assembly and testing.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Why This Project Matters</h2>
+
+    <p>
+      This project is important to me because it moves beyond software into full
+      engineering system design. It requires balancing constraints, making design
+      tradeoffs, and building something that must work in the real world rather than
+      only in code.
+    </p>
+
+    <p>
+      More than anything, it reflects the kind of work I want to keep doing:
+      practical, hands-on engineering that combines hardware, software,
+      and thoughtful design decisions.
+    </p>
+  </section>
+
+  <footer class="footer">
+    © 2026 Brady Chaulk
+  </footer>
+
+  <script>
+    fetch("/navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>
